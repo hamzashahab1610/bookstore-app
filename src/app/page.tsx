@@ -22,6 +22,14 @@ const BookList = () => {
 		setSelectedBook(book);
 	};
 
+	if (state.books.length === 0) {
+		return (
+			<div className="container mx-auto text-center">
+				<p className="text-gray-500">No books found.</p>
+			</div>
+		);
+	}
+
 	return (
 		<div className="container mx-auto">
 			<div className="overflow-x-auto">
